@@ -1,7 +1,7 @@
-from src import favorites
+from script.deploy import deploy_favorites
 
 
 def test_starting_values():
-    favorites_contract = favorites.deploy()
+    favorites_contract = deploy_favorites()
     starting_number = favorites_contract.retrieve()
-    assert starting_number == 7
+    assert 42 == starting_number
