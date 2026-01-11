@@ -1,5 +1,6 @@
 [project]
 src = "src"
+dot_env = ".env"
 
 [networks.anvil]
 url = "http://127.0.0.1:8545"
@@ -7,5 +8,11 @@ save_to_db = false
 prompt_live = false
 default_account_name = "anvil0"
 unsafe_password_file = "~/.moccasin/unsafe-passwords/anvil0"
+
+[networks.sepolia]
+url = "${SEPOLIA_RPC_URL}"
+
+
+
 
 # You can view all configuration options at https://cyfrin.github.io/moccasin/all_moccasin_toml_parameters.html
